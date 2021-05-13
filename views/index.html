@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/main/main.css">
+    <link rel="stylesheet" href="/public/main/popup.css">
+    <link rel="stylesheet" href="/public/index.css">
+</head>
+<body>
+    <button type="button" class="pop_btn btnBox login_btn" >LOG IN</a></button>
+    <button type="button" class="pop_btn btnBox join_btn" >JOIN</a></button>
+    
+    <div>감성 chung만한 노티스보드, zi금 체험하세요</div>
+    <div>JOIN</div>
+    <div>LOG IN</div>
+
+
+    
+        <div class="pop_bg join" id="popUp_1"></div>
+        <div class="pop_con" >
+        <ul class="joinpop_inner off">
+            <li>ID   <input type="text" class="join_box"></li>
+            <li>PASSWORD   <input type="password" class="join_box"></li>
+            <li>PASSWORD CHECK   <input type="password" class="join_box"></li>
+            <li>E-MAIL   <input type="email" class="join_box"></li>
+            <li>IMAGE   <input type="image" class="join_box"></li>
+            <li>NAME   <input type="text" class="join_box"></li>
+        </ul>
+        <button class="pop_close"> X </button>
+        </div>
+    
+    
+
+
+        <div class="pop_bg login" id="popUp_2"></div>
+        <div class="logpop_con">
+        <ul class="logpop_inner">
+            <li>ID   <input type="text" class="login_box"></li>
+            <li>PASSWORD   <input type="password" class="login_box"></li>
+        </ul>
+        <button class="pop_close"> X </button>
+        
+    </div>
+  
+
+
+
+
+
+<script type="text/javascript">
+    let popOpenBtn = document.querySelector('.pop_btn');
+    let popCloseBtn = document.querySelector('pop_close');
+    
+
+    popOpenBtn.addEventListener('click',loginSet);
+    popCloseBtn.addEventListener('click',loginClose);
+    
+    function loginSet(){
+        //let popup = document.querySelector('.logpop_con');
+
+        
+        let popBg = document.querySelector('.login');
+        let type = (popup.style.display == 'none') ? 'block' : 'none';
+        let type_bg = (popBg.style.display == 'none') ? 'block' : 'none';
+        //popup.style.display= type;
+        popBg.style.display= type_bg;
+    }
+    
+    function loginClose(){
+        popup.style.display=='none';
+    }
+
+
+
+
+    //팝업 열기
+    //addEventListener('click',setPop());
+        
+  
+    
+    /*popOpen.on('click', function(){
+        let clickNum = $(this).attr('data-num');
+        $('#popUp_'+clickNum).fadeIn(200);
+    })*/
+    
+
+    //팝업 닫기
+    /*$('.pop _con, .pop_close').on('click',function(){
+    const clickNum = $(this).attr('data-num');
+    
+    $('#popUp_'+clickNum).fadeOut(200);
+    });*/
+
+</script>
+</body>
+</html>
